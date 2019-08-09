@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    </link>
+
+    <title>TODO LIST</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="text-center text-light my-5">
+            <h1 class="mb-5">Todo List</h1>
+            <form class="search d-flex justify-content-between align-items-center">
+                <i class="searchIcon material-icons text-light">search</i>
+                <input type="text" class=" inputTodo form-control m-auto" name="search" placeholder="Search Todo list...">
+                
+            </form>
+        </header>
+        <ul class="todos list-group mx-auto text-dark">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Add HTML structure.</span>
+                <i class="trashIcon material-icons">delete</i>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Style using CSS.</span>
+                <i class="trashIcon material-icons">delete</i>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Add JS functionality.</span>
+                <i class="trashIcon material-icons">delete</i>
+            </li>
+        </ul>
+        
+        <form class="add text-center my-4">
+            <div class="row">
+                    <div class="addIcon">
+                            <i class=" text-light material-icons">add</i>
+                        </div>
+                <div class="col-sm">
+                        <label class="text-light">Add a new Todo</label>
+                        <input class="inputTodo form-control m-auto " type="text" name="add" placeholder="Add a new Todo here...">
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #09669F;
+}
+
+.container {
+    margin-top: 100px;
+    max-width: 700px;
+    border-radius: 10px;
+    background: #0D77AB;
+    padding: 20px 10px 20px 10px;
+    box-shadow: 2px black;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.trashIcon {
+    color: #0D77AB;
+    cursor: pointer;
+}
+
+.searchIcon {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.addIcon {
+    padding: 0;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.todos {
+    padding-left: 44px;
+    padding-right: 44px;
+    padding-bottom: 5px;
+}
+
+.todos li {
+    margin-bottom: 10px;
+}
+
+.search,
+.add {
+    padding-right: 44px;
+}
