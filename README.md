@@ -7,4 +7,9 @@ Technologies used:
 - Bootstrap
 - Javascript
 
-Url = https://hichambezzizi.github.io/TodoList/
+What it does:
+
+- Adds content
+- Filters content
+
+URL = https://hichambezzizi.github.io/TodoList/todos/
