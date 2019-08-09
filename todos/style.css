@@ -49,3 +49,7 @@ body {
 .add {
     padding-right: 44px;
 }
+
+.filtered {
+    display: none !important;
+}

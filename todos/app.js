@@ -1,7 +1,6 @@
 const addForm = document.querySelector('.add');
 const todoList = document.querySelector('.todos');
-
-
+const searchInput = document.querySelector('.search input');
 //reusable function that'll create an li template from todo input
 const addTodo = (todo) => {
 
@@ -31,7 +30,6 @@ addForm.addEventListener('submit', (e) => {
 
 //deleting todos
 // event delegation is used here
-
 todoList.addEventListener('click', (e) => {
 
     // Checks if the clicked target contains the specific class (trashIcon), it deletes the todo
@@ -40,4 +38,37 @@ todoList.addEventListener('click', (e) => {
         e.target.parentElement.remove();
     }
 
+});
+
+// function that will take the searched text match it with the todos in the list and filter it.
+const searchTodo = (searchText) => {
+
+    //converted the todolist html collection into an array with an array that includes todo items that DON'T match.
+    Array.from(todoList.children)
+        .filter((todo) => {
+            //filters anything that includes the input of the search
+            return !todo.textContent.toLowerCase().includes(searchText);
+        })
+        .forEach((todo) => {
+            // and adding this filtered class to the filtered input.
+            return todo.classList.add('filtered');
+        })
+    //converted the todolist html collection into an array with an array that includes todo items that DO match.
+    Array.from(todoList.children)
+        .filter((todo) => {
+            //filters anything that includes the input of the search
+            return todo.textContent.toLocaleLowerCase().includes(searchText);
+        })
+        .forEach((todo) => {
+            // and adding this filtered class to the filtered input.
+            return todo.classList.remove('filtered');
+        })
+};
+
+//event that filters the words of the todolist
+searchInput.addEventListener('keyup', () => {
+    //takes the value of the input value of the search
+    const searchText = searchInput.value.trim().toLowerCase();
+    // this function gets called every time a user presses a key and passes the filter.
+    searchTodo(searchText);
 })
